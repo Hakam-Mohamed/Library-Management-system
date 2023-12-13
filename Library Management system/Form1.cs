@@ -6,5 +6,11 @@ namespace Library_Management_system
         {
             InitializeComponent();
         }
+
+        private void BTNload_Click(object sender, EventArgs e)
+        {
+            string txt = TXBinput.Text;
+            LBoutput.Text = txt;
+        }
     }
 }
