@@ -1,6 +1,6 @@
 ﻿namespace Library_Management_system
 {
-    partial class Login
+    partial class Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            viewBookTable = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)viewBookTable).BeginInit();
             SuspendLayout();
             // 
-            // Login
+            // viewBookTable
+            // 
+            viewBookTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            viewBookTable.Location = new Point(68, 43);
+            viewBookTable.Name = "viewBookTable";
+            viewBookTable.RowHeadersWidth = 62;
+            viewBookTable.Size = new Size(643, 260);
+            viewBookTable.TabIndex = 0;
+            // 
+            // Admin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "Login";
-            Text = "Login";
+            ClientSize = new Size(813, 553);
+            Controls.Add(viewBookTable);
+            Name = "Admin";
+            Text = "Amin page";
             Load += Login_Load;
+            ((System.ComponentModel.ISupportInitialize)viewBookTable).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView viewBookTable;
     }
 }

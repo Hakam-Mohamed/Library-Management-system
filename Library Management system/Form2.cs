@@ -10,16 +10,27 @@ using System.Windows.Forms;
 
 namespace Library_Management_system
 {
-    public partial class Login : Form
+    public partial class Admin : Form
     {
-        public Login()
+
+        DataTable tableOfBooks;
+        public Admin()
         {
             InitializeComponent();
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
+            tableOfBooks = new DataTable();
+            tableOfBooks.Columns.Add("ID", typeof(string));
+            tableOfBooks.Columns.Add("Book name", typeof(string));
 
+            viewBookTable.DataSource = tableOfBooks;
+
+            for (int i = 1; i < 10;  i++)
+            {
+                tableOfBooks.Rows.Add(i, $"Book {i}");
+            }
         }
     }
 }

@@ -32,6 +32,7 @@
             TXBfindbookid = new TextBox();
             LBoutputbookname = new Label();
             BTNfindbook = new Button();
+            BTNadmin = new Button();
             SuspendLayout();
             // 
             // LBfindbookid
@@ -73,11 +74,23 @@
             BTNfindbook.UseVisualStyleBackColor = true;
             BTNfindbook.Click += BTNfindbook_Click;
             // 
+            // BTNadmin
+            // 
+            BTNadmin.Location = new Point(781, 452);
+            BTNadmin.Margin = new Padding(4);
+            BTNadmin.Name = "BTNadmin";
+            BTNadmin.Size = new Size(118, 36);
+            BTNadmin.TabIndex = 10;
+            BTNadmin.Text = "Admin";
+            BTNadmin.UseVisualStyleBackColor = true;
+            BTNadmin.Click += button1_Click;
+            // 
             // Window
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1000, 562);
+            Controls.Add(BTNadmin);
             Controls.Add(BTNfindbook);
             Controls.Add(LBoutputbookname);
             Controls.Add(TXBfindbookid);
@@ -95,5 +108,6 @@
         private TextBox TXBfindbookid;
         private Label LBoutputbookname;
         private Button BTNfindbook;
+        private Button BTNadmin;
     }
 }

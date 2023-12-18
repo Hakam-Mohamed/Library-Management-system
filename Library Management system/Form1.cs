@@ -36,5 +36,11 @@ namespace Library_Management_system
             LBoutputbookname.Text = tableOfBooks.Rows[index].ItemArray[1].ToString();
             // Matches up the Row with the Row index and outputs the name of the book on that Row
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Admin f2 = new Admin();
+            f2.Show();
+        }
     }
 }
