@@ -33,8 +33,6 @@
             LBoutputbookname = new Label();
             BTNfindbook = new Button();
             BTNadmin = new Button();
-            BTNaddbook = new Button();
-            TXBaddnewbook = new TextBox();
             SuspendLayout();
             // 
             // LBfindbookid
@@ -87,32 +85,11 @@
             BTNadmin.UseVisualStyleBackColor = true;
             BTNadmin.Click += button1_Click;
             // 
-            // BTNaddbook
-            // 
-            BTNaddbook.Location = new Point(781, 496);
-            BTNaddbook.Margin = new Padding(4);
-            BTNaddbook.Name = "BTNaddbook";
-            BTNaddbook.Size = new Size(118, 36);
-            BTNaddbook.TabIndex = 11;
-            BTNaddbook.Text = "Add book";
-            BTNaddbook.UseVisualStyleBackColor = true;
-            BTNaddbook.Click += BTNaddbook_Click;
-            // 
-            // TXBaddnewbook
-            // 
-            TXBaddnewbook.Location = new Point(592, 501);
-            TXBaddnewbook.Margin = new Padding(4);
-            TXBaddnewbook.Name = "TXBaddnewbook";
-            TXBaddnewbook.Size = new Size(155, 31);
-            TXBaddnewbook.TabIndex = 12;
-            // 
             // Window
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1000, 562);
-            Controls.Add(TXBaddnewbook);
-            Controls.Add(BTNaddbook);
             Controls.Add(BTNadmin);
             Controls.Add(BTNfindbook);
             Controls.Add(LBoutputbookname);
@@ -132,7 +109,5 @@
         private Label LBoutputbookname;
         private Button BTNfindbook;
         private Button BTNadmin;
-        private Button BTNaddbook;
-        private TextBox TXBaddnewbook;
     }
 }

@@ -12,16 +12,12 @@ namespace Library_Management_system
 {
     public partial class Admin : Form
     {
-
         DataTable tableOfBooks;
-        public Admin()
+        private readonly Window _win;
+        public Admin(Window win)
         {
+            _win = win;
             InitializeComponent();
-        }
-
-        public void addbook(string bookName)
-        {
-            tableOfBooks.Rows.Add((tableOfBooks.Rows.Count)+1, bookName);
         }
         private void Login_Load(object sender, EventArgs e)
         {
@@ -31,10 +27,16 @@ namespace Library_Management_system
 
             viewBookTable.DataSource = tableOfBooks;
 
-            for (int i = 1; i < 10;  i++)
+            for (int i = 1; i < 10; i++)
             {
                 tableOfBooks.Rows.Add(i, $"Book {i}");
             }
+        }
+
+        private void BTNaddbook_Click(object sender, EventArgs e)
+        {
+            _win.addbook(TXBaddnewbook.Text);
+            tableOfBooks.Rows.Add((tableOfBooks.Rows.Count) + 1, TXBaddnewbook.Text);
         }
     }
 }
