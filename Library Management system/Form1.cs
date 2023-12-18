@@ -7,6 +7,7 @@ namespace Library_Management_system
     {
 
         DataTable tableOfBooks;
+        Admin f2 = new Admin();
 
         public Window()
         {
@@ -39,8 +40,15 @@ namespace Library_Management_system
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Admin f2 = new Admin();
             f2.Show();
+        }
+
+        private void BTNaddbook_Click(object sender, EventArgs e)
+        {
+            f2.Show();
+            f2.addbook(TXBaddnewbook.Text);
+            f2.Hide();
+            tableOfBooks.Rows.Add((tableOfBooks.Rows.Count) + 1, TXBaddnewbook.Text);
         }
     }
 }

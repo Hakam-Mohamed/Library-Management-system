@@ -19,6 +19,10 @@ namespace Library_Management_system
             InitializeComponent();
         }
 
+        public void addbook(string bookName)
+        {
+            tableOfBooks.Rows.Add((tableOfBooks.Rows.Count)+1, bookName);
+        }
         private void Login_Load(object sender, EventArgs e)
         {
             tableOfBooks = new DataTable();
