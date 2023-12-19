@@ -12,31 +12,24 @@ namespace Library_Management_system
 {
     public partial class Admin : Form
     {
-        DataTable tableOfBooks;
         private readonly Window _win;
         public Admin(Window win)
         {
             _win = win;
+            // Creates a variable _win which is just a variable holding the main page
             InitializeComponent();
         }
+
         private void Login_Load(object sender, EventArgs e)
         {
-            tableOfBooks = new DataTable();
-            tableOfBooks.Columns.Add("ID", typeof(string));
-            tableOfBooks.Columns.Add("Book name", typeof(string));
-
-            viewBookTable.DataSource = tableOfBooks;
-
-            for (int i = 1; i < 10; i++)
-            {
-                tableOfBooks.Rows.Add(i, $"Book {i}");
-            }
+            viewBookTable.DataSource = _win.getTableBooks();
+            // Sets the table source to be found in the Main page
         }
 
         private void BTNaddbook_Click(object sender, EventArgs e)
         {
             _win.addbook(TXBaddnewbook.Text);
-            tableOfBooks.Rows.Add((tableOfBooks.Rows.Count) + 1, TXBaddnewbook.Text);
+            // Passes the text given in, to the main page through this method
         }
     }
 }

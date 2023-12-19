@@ -12,17 +12,26 @@ namespace Library_Management_system
         {
             InitializeComponent();
         }
+
+        // A method which takes in the new book name and adds it to the table
         public void addbook(string bookName)
         {
             tableOfBooks.Rows.Add((tableOfBooks.Rows.Count) + 1, bookName);
         }
+
+        // A method which returns the table so it can be accessed from the admin panel 
+        public DataTable getTableBooks()
+        {
+            return tableOfBooks;
+        }
+
+
         private void Window_Load(object sender, EventArgs e)
         {
             tableOfBooks = new DataTable();
             tableOfBooks.Columns.Add("ID", typeof(String));
             tableOfBooks.Columns.Add("Book name", typeof(String));
             // Creates a table which has a column with the ID and a column with the name of the book 
-
 
             for (int i = 0; i < 10; i++)
             {
@@ -36,8 +45,11 @@ namespace Library_Management_system
         {
             int index = Convert.ToInt32(TXBfindbookid.Text);
             // Takes in the number input into the text book and converts into an int 
-            LBoutputbookname.Text = tableOfBooks.Rows[index].ItemArray[1].ToString();
-            // Matches up the Row with the Row index and outputs the name of the book on that Row
+            if (tableOfBooks.Rows.Count >= index)
+            {
+                LBoutputbookname.Text = tableOfBooks.Rows[index].ItemArray[1].ToString();
+                // Matches up the Row with the Row index and outputs the name of the book on that Row
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

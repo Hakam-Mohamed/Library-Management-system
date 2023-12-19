@@ -97,7 +97,7 @@
             Controls.Add(LBfindbookid);
             Margin = new Padding(4);
             Name = "Window";
-            Text = "s";
+            Text = "Library Application";
             Load += Window_Load;
             ResumeLayout(false);
             PerformLayout();
