@@ -33,6 +33,8 @@
             LBoutputbookname = new Label();
             BTNfindbook = new Button();
             BTNadmin = new Button();
+            BTNloginSignUp = new Button();
+            LBloggedIn = new Label();
             SuspendLayout();
             // 
             // LBfindbookid
@@ -85,11 +87,33 @@
             BTNadmin.UseVisualStyleBackColor = true;
             BTNadmin.Click += button1_Click;
             // 
+            // BTNloginSignUp
+            // 
+            BTNloginSignUp.Location = new Point(758, 52);
+            BTNloginSignUp.Margin = new Padding(4);
+            BTNloginSignUp.Name = "BTNloginSignUp";
+            BTNloginSignUp.Size = new Size(153, 44);
+            BTNloginSignUp.TabIndex = 11;
+            BTNloginSignUp.Text = "Login / Sign up ";
+            BTNloginSignUp.UseVisualStyleBackColor = true;
+            BTNloginSignUp.Click += BTNloginSignUp_Click;
+            // 
+            // LBloggedIn
+            // 
+            LBloggedIn.AutoSize = true;
+            LBloggedIn.Location = new Point(781, 62);
+            LBloggedIn.Margin = new Padding(4, 0, 4, 0);
+            LBloggedIn.Name = "LBloggedIn";
+            LBloggedIn.Size = new Size(0, 25);
+            LBloggedIn.TabIndex = 12;
+            // 
             // Window
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1000, 562);
+            Controls.Add(LBloggedIn);
+            Controls.Add(BTNloginSignUp);
             Controls.Add(BTNadmin);
             Controls.Add(BTNfindbook);
             Controls.Add(LBoutputbookname);
@@ -109,5 +133,7 @@
         private Label LBoutputbookname;
         private Button BTNfindbook;
         private Button BTNadmin;
+        private Button BTNloginSignUp;
+        private Label LBloggedIn;
     }
 }

@@ -7,6 +7,7 @@ namespace Library_Management_system
     {
 
         DataTable tableOfBooks;
+        DataTable tableOfUsers;
 
         public Window()
         {
@@ -18,11 +19,25 @@ namespace Library_Management_system
         {
             tableOfBooks.Rows.Add((tableOfBooks.Rows.Count) + 1, bookName);
         }
+        public void addUser(string userName, string password)
+        {
+            tableOfUsers.Rows.Add(userName, password);
+        }
+
+        public void loggedin(string userName)
+        {
+            BTNloginSignUp.Hide();
+            LBloggedIn.Text = userName;
+        }
 
         // A method which returns the table so it can be accessed from the admin panel 
         public DataTable getTableBooks()
         {
             return tableOfBooks;
+        }
+        public DataTable getTableUsers()
+        {
+            return tableOfUsers;
         }
 
 
@@ -39,6 +54,11 @@ namespace Library_Management_system
             }
             // Goes ahead and adds 10 books called "Book i" where i is the index 
             // Every book that is added is added as a new row
+
+            tableOfUsers = new DataTable();
+            tableOfUsers.Columns.Add("User name", typeof(string));
+            tableOfUsers.Columns.Add("Password", typeof(string));
+            tableOfUsers.Rows.Add("Admin", "password");
         }
 
         private void BTNfindbook_Click(object sender, EventArgs e)
@@ -56,6 +76,12 @@ namespace Library_Management_system
         {
             Admin f2 = new Admin(this);
             f2.Show();
+        }
+
+        private void BTNloginSignUp_Click(object sender, EventArgs e)
+        {
+            Login f3 = new Login(this);
+            f3.Show();
         }
     }
 }
