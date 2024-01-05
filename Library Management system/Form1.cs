@@ -17,7 +17,7 @@ namespace Library_Management_system
         // A method which takes in the new book name and adds it to the table
         public void addbook(string bookName)
         {
-            tableOfBooks.Rows.Add((tableOfBooks.Rows.Count) + 1, bookName);
+            tableOfBooks.Rows.Add((tableOfBooks.Rows.Count), bookName);
         }
         public void addUser(string userName, string password)
         {
