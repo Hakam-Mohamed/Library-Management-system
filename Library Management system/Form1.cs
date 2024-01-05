@@ -46,6 +46,7 @@ namespace Library_Management_system
             tableOfBooks = new DataTable();
             tableOfBooks.Columns.Add("ID", typeof(String));
             tableOfBooks.Columns.Add("Book name", typeof(String));
+            tableOfBooks.Columns.Add("Reserved", typeof(String));
             // Creates a table which has a column with the ID and a column with the name of the book 
 
             for (int i = 0; i < 10; i++)
@@ -54,6 +55,7 @@ namespace Library_Management_system
             }
             // Goes ahead and adds 10 books called "Book i" where i is the index 
             // Every book that is added is added as a new row
+
 
             tableOfUsers = new DataTable();
             tableOfUsers.Columns.Add("User name", typeof(string));
