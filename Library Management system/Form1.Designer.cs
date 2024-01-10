@@ -36,6 +36,7 @@
             BTNloginSignUp = new Button();
             LBloggedIn = new Label();
             BTNreserve = new Button();
+            LBreserveable = new Label();
             SuspendLayout();
             // 
             // LBfindbookid
@@ -119,11 +120,20 @@
             BTNreserve.UseVisualStyleBackColor = true;
             BTNreserve.Click += button1_Click_1;
             // 
+            // LBreserveable
+            // 
+            LBreserveable.AutoSize = true;
+            LBreserveable.Location = new Point(608, 106);
+            LBreserveable.Name = "LBreserveable";
+            LBreserveable.Size = new Size(0, 25);
+            LBreserveable.TabIndex = 14;
+            // 
             // Window
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1000, 562);
+            Controls.Add(LBreserveable);
             Controls.Add(BTNreserve);
             Controls.Add(LBloggedIn);
             Controls.Add(BTNloginSignUp);
@@ -149,5 +159,6 @@
         private Button BTNloginSignUp;
         private Label LBloggedIn;
         private Button BTNreserve;
+        private Label LBreserveable;
     }
 }

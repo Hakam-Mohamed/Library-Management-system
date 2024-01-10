@@ -118,7 +118,17 @@ namespace Library_Management_system
         private void button1_Click_1(object sender, EventArgs e)
         {
             int index = Convert.ToInt32(TXBfindbookid.Text);
-            tableOfBooks.Rows[index][2]="14 days";
+            if (tableOfBooks.Rows[index][2] == "14 days")
+            {
+                LBreserveable.Location = new Point(560, 108);
+                LBreserveable.Text = "There are currently " + tableOfBooks.Rows[index][2].ToString() + " left until it can be reserved";
+            }
+            else
+            {
+                tableOfBooks.Rows[index][2] = "14 days";
+                LBreserveable.Text = "Reserved book for " + tableOfBooks.Rows[index][2].ToString();
+            }
+
 
         }
     }
