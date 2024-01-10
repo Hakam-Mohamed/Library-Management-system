@@ -90,7 +90,8 @@
             // 
             // BTNloginSignUp
             // 
-            BTNloginSignUp.Location = new Point(758, 52);
+            BTNloginSignUp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BTNloginSignUp.Location = new Point(691, 72);
             BTNloginSignUp.Margin = new Padding(4);
             BTNloginSignUp.Name = "BTNloginSignUp";
             BTNloginSignUp.Size = new Size(153, 44);

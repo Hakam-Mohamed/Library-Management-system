@@ -9,10 +9,12 @@ namespace Library_Management_system
 
         DataTable tableOfBooks;
         DataTable tableOfUsers;
+        bool loggedIn = false;
 
         public Window()
         {
             InitializeComponent();
+            hideOrShow();
         }
 
         // A method which takes in the new book name and adds it to the table
@@ -29,6 +31,8 @@ namespace Library_Management_system
         {
             BTNloginSignUp.Hide();
             LBloggedIn.Text = userName;
+            loggedIn = true;
+            hideOrShow();
         }
 
         // A method which returns the table so it can be accessed from the admin panel 
@@ -39,6 +43,30 @@ namespace Library_Management_system
         public DataTable getTableUsers()
         {
             return tableOfUsers;
+        }
+
+        private void hideOrShow()
+        {
+            if (loggedIn == true)
+            {
+                LBfindbookid.Show();
+                LBoutputbookname.Show();
+                TXBfindbookid.Show();
+                BTNfindbook.Show();
+                BTNreserve.Show();
+                BTNadmin.Hide();
+                this.Size = new Size(1022, 618);
+            }
+            else
+            {
+                LBfindbookid.Hide();
+                LBoutputbookname.Hide();
+                TXBfindbookid.Hide();
+                BTNfindbook.Hide();
+                BTNreserve.Hide();
+                this.Size = new Size(492, 593);
+                //BTNloginSignUp.Location = new Point(90, 139);
+            }
         }
 
 
