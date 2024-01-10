@@ -1,3 +1,4 @@
+using System;
 using System.Data;
 using System.Web;
 
@@ -84,6 +85,13 @@ namespace Library_Management_system
         {
             Login f3 = new Login(this);
             f3.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            int index = Convert.ToInt32(TXBfindbookid.Text);
+            tableOfBooks.Rows[index][2]="14 days";
+
         }
     }
 }
