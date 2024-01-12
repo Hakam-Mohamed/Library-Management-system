@@ -92,13 +92,15 @@
             // BTNloginSignUp
             // 
             BTNloginSignUp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BTNloginSignUp.BackColor = Color.White;
+            BTNloginSignUp.FlatStyle = FlatStyle.Flat;
             BTNloginSignUp.Location = new Point(691, 72);
             BTNloginSignUp.Margin = new Padding(4);
             BTNloginSignUp.Name = "BTNloginSignUp";
             BTNloginSignUp.Size = new Size(153, 44);
             BTNloginSignUp.TabIndex = 11;
             BTNloginSignUp.Text = "Login / Sign up ";
-            BTNloginSignUp.UseVisualStyleBackColor = true;
+            BTNloginSignUp.UseVisualStyleBackColor = false;
             BTNloginSignUp.Click += BTNloginSignUp_Click;
             // 
             // LBloggedIn
@@ -132,6 +134,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1000, 562);
             Controls.Add(LBreserveable);
             Controls.Add(BTNreserve);
