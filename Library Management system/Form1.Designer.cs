@@ -38,6 +38,7 @@
             LBloggedIn = new Label();
             BTNreserve = new Button();
             LBreserveable = new Label();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // LBfindbookid
@@ -80,15 +81,15 @@
             // 
             BTNfindbook.BackColor = Color.FromArgb(0, 192, 192);
             BTNfindbook.FlatStyle = FlatStyle.Flat;
-            BTNfindbook.Font = new Font("Segoe UI", 10F);
-            BTNfindbook.ForeColor = SystemColors.ButtonHighlight;
+            BTNfindbook.Image = (Image)resources.GetObject("BTNfindbook.Image");
             BTNfindbook.Location = new Point(334, 150);
             BTNfindbook.Margin = new Padding(4);
             BTNfindbook.Name = "BTNfindbook";
+            BTNfindbook.Padding = new Padding(10, 0, 0, 0);
             BTNfindbook.Size = new Size(118, 36);
             BTNfindbook.TabIndex = 9;
             BTNfindbook.Text = "Find";
-            BTNfindbook.UseVisualStyleBackColor = false;
+            BTNfindbook.UseVisualStyleBackColor = true;
             BTNfindbook.Click += BTNfindbook_Click;
             // 
             // BTNadmin
@@ -141,12 +142,19 @@
             // 
             // LBreserveable
             // 
-            LBreserveable.Font = new Font("Segoe UI", 10F);
             LBreserveable.Location = new Point(152, 276);
             LBreserveable.Name = "LBreserveable";
             LBreserveable.Size = new Size(737, 48);
             LBreserveable.TabIndex = 14;
             LBreserveable.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.RosyBrown;
+            panel1.Location = new Point(270, 36);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(441, 254);
+            panel1.TabIndex = 15;
             // 
             // Window
             // 
@@ -164,6 +172,7 @@
             Controls.Add(LBoutputbookname);
             Controls.Add(TXBfindbookid);
             Controls.Add(LBfindbookid);
+            Controls.Add(panel1);
             Margin = new Padding(4);
             Name = "Window";
             Text = "Library Application";
@@ -182,5 +191,6 @@
         private Label LBloggedIn;
         private Button BTNreserve;
         private Label LBreserveable;
+        private Panel panel1;
     }
 }
