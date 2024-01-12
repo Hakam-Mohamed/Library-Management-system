@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Window));
             LBfindbookid = new Label();
             TXBfindbookid = new TextBox();
             LBoutputbookname = new Label();
@@ -69,6 +70,7 @@
             // 
             // BTNfindbook
             // 
+            BTNfindbook.FlatStyle = FlatStyle.Flat;
             BTNfindbook.Location = new Point(334, 150);
             BTNfindbook.Margin = new Padding(4);
             BTNfindbook.Name = "BTNfindbook";
@@ -114,6 +116,7 @@
             // 
             // BTNreserve
             // 
+            BTNreserve.FlatStyle = FlatStyle.Flat;
             BTNreserve.Location = new Point(426, 216);
             BTNreserve.Name = "BTNreserve";
             BTNreserve.Size = new Size(112, 34);
@@ -135,6 +138,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1000, 562);
             Controls.Add(LBreserveable);
             Controls.Add(BTNreserve);
