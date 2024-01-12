@@ -25,6 +25,7 @@ namespace Library_Management_system
             viewBookTable.DataSource = _win.getTableBooks();
             // Sets the table source to be found in the Main page
             viewUsersTable.DataSource = _win.getTableUsers();
+            viewUsersBooksTable.DataSource = _win.getTableIDBooks();
         }
 
         private void BTNaddbook_Click(object sender, EventArgs e)
