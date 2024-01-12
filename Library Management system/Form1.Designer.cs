@@ -42,7 +42,7 @@
             // LBfindbookid
             // 
             LBfindbookid.AutoSize = true;
-            LBfindbookid.Location = new Point(44, 43);
+            LBfindbookid.Location = new Point(317, 91);
             LBfindbookid.Margin = new Padding(4, 0, 4, 0);
             LBfindbookid.Name = "LBfindbookid";
             LBfindbookid.Size = new Size(157, 25);
@@ -51,7 +51,7 @@
             // 
             // TXBfindbookid
             // 
-            TXBfindbookid.Location = new Point(44, 100);
+            TXBfindbookid.Location = new Point(511, 91);
             TXBfindbookid.Margin = new Padding(4);
             TXBfindbookid.Name = "TXBfindbookid";
             TXBfindbookid.Size = new Size(155, 31);
@@ -60,7 +60,7 @@
             // LBoutputbookname
             // 
             LBoutputbookname.AutoSize = true;
-            LBoutputbookname.Location = new Point(255, 103);
+            LBoutputbookname.Location = new Point(542, 156);
             LBoutputbookname.Margin = new Padding(4, 0, 4, 0);
             LBoutputbookname.Name = "LBoutputbookname";
             LBoutputbookname.Size = new Size(109, 25);
@@ -69,7 +69,7 @@
             // 
             // BTNfindbook
             // 
-            BTNfindbook.Location = new Point(44, 168);
+            BTNfindbook.Location = new Point(334, 150);
             BTNfindbook.Margin = new Padding(4);
             BTNfindbook.Name = "BTNfindbook";
             BTNfindbook.Size = new Size(118, 36);
@@ -112,7 +112,7 @@
             // 
             // BTNreserve
             // 
-            BTNreserve.Location = new Point(438, 103);
+            BTNreserve.Location = new Point(426, 216);
             BTNreserve.Name = "BTNreserve";
             BTNreserve.Size = new Size(112, 34);
             BTNreserve.TabIndex = 13;
@@ -122,11 +122,11 @@
             // 
             // LBreserveable
             // 
-            LBreserveable.AutoSize = true;
-            LBreserveable.Location = new Point(608, 106);
+            LBreserveable.Location = new Point(152, 276);
             LBreserveable.Name = "LBreserveable";
-            LBreserveable.Size = new Size(0, 25);
+            LBreserveable.Size = new Size(737, 48);
             LBreserveable.TabIndex = 14;
+            LBreserveable.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Window
             // 
