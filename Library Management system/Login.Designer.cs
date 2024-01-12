@@ -74,24 +74,30 @@
             // 
             // BTNlogin
             // 
+            BTNlogin.BackColor = Color.FromArgb(0, 192, 192);
+            BTNlogin.FlatStyle = FlatStyle.Flat;
+            BTNlogin.ForeColor = SystemColors.ButtonHighlight;
             BTNlogin.Location = new Point(173, 238);
             BTNlogin.Margin = new Padding(4);
             BTNlogin.Name = "BTNlogin";
             BTNlogin.Size = new Size(118, 36);
             BTNlogin.TabIndex = 11;
             BTNlogin.Text = "Login";
-            BTNlogin.UseVisualStyleBackColor = true;
+            BTNlogin.UseVisualStyleBackColor = false;
             BTNlogin.Click += BTNlogin_Click;
             // 
             // BTNsignUp
             // 
+            BTNsignUp.BackColor = Color.FromArgb(0, 192, 192);
+            BTNsignUp.FlatStyle = FlatStyle.Flat;
+            BTNsignUp.ForeColor = SystemColors.ButtonHighlight;
             BTNsignUp.Location = new Point(173, 304);
             BTNsignUp.Margin = new Padding(4);
             BTNsignUp.Name = "BTNsignUp";
             BTNsignUp.Size = new Size(118, 36);
             BTNsignUp.TabIndex = 16;
             BTNsignUp.Text = "Sign up";
-            BTNsignUp.UseVisualStyleBackColor = true;
+            BTNsignUp.UseVisualStyleBackColor = false;
             BTNsignUp.Click += BTNsignUp_Click;
             // 
             // Login

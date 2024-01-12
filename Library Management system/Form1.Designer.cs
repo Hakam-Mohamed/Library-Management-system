@@ -43,15 +43,20 @@
             // LBfindbookid
             // 
             LBfindbookid.AutoSize = true;
+            LBfindbookid.BackColor = Color.FromArgb(0, 192, 192);
+            LBfindbookid.Font = new Font("Segoe UI", 10F);
+            LBfindbookid.ForeColor = SystemColors.ButtonHighlight;
             LBfindbookid.Location = new Point(317, 91);
             LBfindbookid.Margin = new Padding(4, 0, 4, 0);
             LBfindbookid.Name = "LBfindbookid";
-            LBfindbookid.Size = new Size(157, 25);
+            LBfindbookid.Size = new Size(168, 28);
             LBfindbookid.TabIndex = 6;
             LBfindbookid.Text = "ID of book to find";
             // 
             // TXBfindbookid
             // 
+            TXBfindbookid.BackColor = Color.FromArgb(0, 192, 192);
+            TXBfindbookid.ForeColor = SystemColors.ButtonHighlight;
             TXBfindbookid.Location = new Point(511, 91);
             TXBfindbookid.Margin = new Padding(4);
             TXBfindbookid.Name = "TXBfindbookid";
@@ -61,23 +66,29 @@
             // LBoutputbookname
             // 
             LBoutputbookname.AutoSize = true;
-            LBoutputbookname.Location = new Point(542, 156);
+            LBoutputbookname.BackColor = Color.FromArgb(0, 192, 192);
+            LBoutputbookname.Font = new Font("Segoe UI", 10F);
+            LBoutputbookname.ForeColor = SystemColors.ButtonHighlight;
+            LBoutputbookname.Location = new Point(542, 155);
             LBoutputbookname.Margin = new Padding(4, 0, 4, 0);
             LBoutputbookname.Name = "LBoutputbookname";
-            LBoutputbookname.Size = new Size(109, 25);
+            LBoutputbookname.Size = new Size(118, 28);
             LBoutputbookname.TabIndex = 8;
             LBoutputbookname.Text = "Book Name:";
             // 
             // BTNfindbook
             // 
+            BTNfindbook.BackColor = Color.FromArgb(0, 192, 192);
             BTNfindbook.FlatStyle = FlatStyle.Flat;
+            BTNfindbook.Font = new Font("Segoe UI", 10F);
+            BTNfindbook.ForeColor = SystemColors.ButtonHighlight;
             BTNfindbook.Location = new Point(334, 150);
             BTNfindbook.Margin = new Padding(4);
             BTNfindbook.Name = "BTNfindbook";
             BTNfindbook.Size = new Size(118, 36);
             BTNfindbook.TabIndex = 9;
             BTNfindbook.Text = "Find";
-            BTNfindbook.UseVisualStyleBackColor = true;
+            BTNfindbook.UseVisualStyleBackColor = false;
             BTNfindbook.Click += BTNfindbook_Click;
             // 
             // BTNadmin
@@ -116,17 +127,21 @@
             // 
             // BTNreserve
             // 
+            BTNreserve.BackColor = Color.FromArgb(0, 192, 192);
             BTNreserve.FlatStyle = FlatStyle.Flat;
+            BTNreserve.Font = new Font("Segoe UI", 10F);
+            BTNreserve.ForeColor = SystemColors.ButtonHighlight;
             BTNreserve.Location = new Point(426, 216);
             BTNreserve.Name = "BTNreserve";
             BTNreserve.Size = new Size(112, 34);
             BTNreserve.TabIndex = 13;
             BTNreserve.Text = "Reserve";
-            BTNreserve.UseVisualStyleBackColor = true;
+            BTNreserve.UseVisualStyleBackColor = false;
             BTNreserve.Click += button1_Click_1;
             // 
             // LBreserveable
             // 
+            LBreserveable.Font = new Font("Segoe UI", 10F);
             LBreserveable.Location = new Point(152, 276);
             LBreserveable.Name = "LBreserveable";
             LBreserveable.Size = new Size(737, 48);
