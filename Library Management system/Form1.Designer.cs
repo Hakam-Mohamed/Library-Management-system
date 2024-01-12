@@ -144,7 +144,7 @@
             // 
             // LBreserveable
             // 
-            LBreserveable.Location = new Point(152, 276);
+            LBreserveable.Location = new Point(138, 303);
             LBreserveable.Name = "LBreserveable";
             LBreserveable.Size = new Size(737, 48);
             LBreserveable.TabIndex = 14;
