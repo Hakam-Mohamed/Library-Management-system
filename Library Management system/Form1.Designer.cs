@@ -81,6 +81,7 @@
             // 
             BTNfindbook.BackColor = Color.FromArgb(0, 192, 192);
             BTNfindbook.FlatStyle = FlatStyle.Flat;
+            BTNfindbook.ForeColor = SystemColors.ButtonHighlight;
             BTNfindbook.Image = (Image)resources.GetObject("BTNfindbook.Image");
             BTNfindbook.Location = new Point(334, 150);
             BTNfindbook.Margin = new Padding(4);
@@ -89,6 +90,7 @@
             BTNfindbook.Size = new Size(118, 36);
             BTNfindbook.TabIndex = 9;
             BTNfindbook.Text = "Find";
+            BTNfindbook.TextImageRelation = TextImageRelation.ImageBeforeText;
             BTNfindbook.UseVisualStyleBackColor = true;
             BTNfindbook.Click += BTNfindbook_Click;
             // 
