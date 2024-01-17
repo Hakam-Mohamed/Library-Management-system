@@ -55,6 +55,8 @@ namespace Library_Management_system
                 BTNfindbook.Show();
                 BTNreserve.Show();
                 BTNadmin.Hide();
+                LBreserveable.Show();
+                panel1.Show();
                 this.Size = new Size(1022, 618);
             }
             else
@@ -64,6 +66,8 @@ namespace Library_Management_system
                 TXBfindbookid.Hide();
                 BTNfindbook.Hide();
                 BTNreserve.Hide();
+                LBreserveable.Hide();
+                panel1.Hide();
                 this.Size = new Size(492, 593);
                 //BTNloginSignUp.Location = new Point(90, 139);
             }

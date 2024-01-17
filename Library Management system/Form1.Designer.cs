@@ -39,6 +39,7 @@
             BTNreserve = new Button();
             LBreserveable = new Label();
             panel1 = new Panel();
+            panel2 = new Panel();
             SuspendLayout();
             // 
             // LBfindbookid
@@ -80,6 +81,7 @@
             // BTNfindbook
             // 
             BTNfindbook.BackColor = Color.FromArgb(0, 192, 192);
+            BTNfindbook.FlatAppearance.BorderSize = 0;
             BTNfindbook.FlatStyle = FlatStyle.Flat;
             BTNfindbook.ForeColor = SystemColors.ButtonHighlight;
             BTNfindbook.Image = (Image)resources.GetObject("BTNfindbook.Image");
@@ -107,15 +109,17 @@
             // 
             // BTNloginSignUp
             // 
-            BTNloginSignUp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BTNloginSignUp.BackColor = Color.White;
+            BTNloginSignUp.BackColor = Color.FromArgb(0, 192, 192);
+            BTNloginSignUp.FlatAppearance.BorderSize = 0;
             BTNloginSignUp.FlatStyle = FlatStyle.Flat;
-            BTNloginSignUp.Location = new Point(691, 72);
+            BTNloginSignUp.Font = new Font("Segoe UI", 12F);
+            BTNloginSignUp.ForeColor = SystemColors.ButtonHighlight;
+            BTNloginSignUp.Location = new Point(159, 206);
             BTNloginSignUp.Margin = new Padding(4);
             BTNloginSignUp.Name = "BTNloginSignUp";
-            BTNloginSignUp.Size = new Size(153, 44);
+            BTNloginSignUp.Size = new Size(201, 66);
             BTNloginSignUp.TabIndex = 11;
-            BTNloginSignUp.Text = "Login / Sign up ";
+            BTNloginSignUp.Text = "Login / Sign up";
             BTNloginSignUp.UseVisualStyleBackColor = false;
             BTNloginSignUp.Click += BTNloginSignUp_Click;
             // 
@@ -131,6 +135,7 @@
             // BTNreserve
             // 
             BTNreserve.BackColor = Color.FromArgb(0, 192, 192);
+            BTNreserve.FlatAppearance.BorderSize = 0;
             BTNreserve.FlatStyle = FlatStyle.Flat;
             BTNreserve.Font = new Font("Segoe UI", 10F);
             BTNreserve.ForeColor = SystemColors.ButtonHighlight;
@@ -158,6 +163,14 @@
             panel1.Size = new Size(441, 254);
             panel1.TabIndex = 15;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.RosyBrown;
+            panel2.Location = new Point(770, 36);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(172, 68);
+            panel2.TabIndex = 16;
+            // 
             // Window
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -165,16 +178,17 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1000, 562);
+            Controls.Add(BTNloginSignUp);
             Controls.Add(LBreserveable);
             Controls.Add(BTNreserve);
             Controls.Add(LBloggedIn);
-            Controls.Add(BTNloginSignUp);
             Controls.Add(BTNadmin);
             Controls.Add(BTNfindbook);
             Controls.Add(LBoutputbookname);
             Controls.Add(TXBfindbookid);
             Controls.Add(LBfindbookid);
             Controls.Add(panel1);
+            Controls.Add(panel2);
             Margin = new Padding(4);
             Name = "Window";
             Text = "Library Application";
@@ -194,5 +208,6 @@
         private Button BTNreserve;
         private Label LBreserveable;
         private Panel panel1;
+        private Panel panel2;
     }
 }
