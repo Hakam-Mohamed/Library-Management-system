@@ -9,6 +9,7 @@ namespace Library_Management_system
 
         DataTable tableOfBooks;
         DataTable tableOfUsers;
+        DataTable tableOfUsersBooks;
         bool loggedIn = false;
 
         public Window()
@@ -26,7 +27,10 @@ namespace Library_Management_system
         {
             tableOfUsers.Rows.Add(userName, password);
         }
-
+        public void addUserID(string ID, string bookName)
+        {
+            tableOfUsersBooks.Rows.Add(ID, bookName);
+        }
         public void loggedin(string userName)
         {
             BTNloginSignUp.Hide();
@@ -43,6 +47,11 @@ namespace Library_Management_system
         public DataTable getTableUsers()
         {
             return tableOfUsers;
+        }
+
+        public DataTable getTableIDBooks() 
+        {
+            return tableOfUsersBooks;
         }
 
         private void hideOrShow()

@@ -32,8 +32,10 @@
             BTNaddbook = new Button();
             viewBookTable = new DataGridView();
             viewUsersTable = new DataGridView();
+            viewUsersBooksTable = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)viewBookTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)viewUsersTable).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)viewUsersBooksTable).BeginInit();
             SuspendLayout();
             // 
             // TXBaddnewbook
@@ -73,11 +75,21 @@
             viewUsersTable.Size = new Size(357, 352);
             viewUsersTable.TabIndex = 16;
             // 
+            // viewUsersBooksTable
+            // 
+            viewUsersBooksTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            viewUsersBooksTable.Location = new Point(853, 30);
+            viewUsersBooksTable.Name = "viewUsersBooksTable";
+            viewUsersBooksTable.RowHeadersWidth = 62;
+            viewUsersBooksTable.Size = new Size(349, 348);
+            viewUsersBooksTable.TabIndex = 17;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(813, 553);
+            ClientSize = new Size(1214, 553);
+            Controls.Add(viewUsersBooksTable);
             Controls.Add(viewUsersTable);
             Controls.Add(viewBookTable);
             Controls.Add(TXBaddnewbook);
@@ -87,6 +99,7 @@
             Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)viewBookTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)viewUsersTable).EndInit();
+            ((System.ComponentModel.ISupportInitialize)viewUsersBooksTable).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -96,5 +109,6 @@
         private Button BTNaddbook;
         private DataGridView viewBookTable;
         private DataGridView viewUsersTable;
+        private DataGridView viewUsersBooksTable;
     }
 }
