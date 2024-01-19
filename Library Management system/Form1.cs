@@ -1,6 +1,7 @@
 using System;
 using System.Data;
 using System.Web;
+using System.Collections.Generic;
 
 namespace Library_Management_system
 {
@@ -28,6 +29,17 @@ namespace Library_Management_system
             tableOfUsers.Rows.Add(userName, password);
             tableOfUsersBooks.Rows.Add(userName);
         }
+        public void addBook2(string bookName, string userName)
+        {
+            tableOfUsersBooks.Rows[num][1](bookName);
+        }
+        public void getindexUsername(string userName)
+        {
+
+            int indexUser = tableOfUsersBooks.FindIndex(0, userName);
+
+        }
+
         public void loggedin(string userName)
         {
             BTNloginSignUp.Hide();
@@ -141,6 +153,8 @@ namespace Library_Management_system
             {
                 tableOfBooks.Rows[index][2] = "14 days";
                 LBreserveable.Text = "Reserved book for " + tableOfBooks.Rows[index][2].ToString();
+
+
             }
 
 
