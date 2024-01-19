@@ -103,6 +103,11 @@ namespace Library_Management_system
             tableOfUsers.Columns.Add("User name", typeof(string));
             tableOfUsers.Columns.Add("Password", typeof(string));
             tableOfUsers.Rows.Add("Admin", "password");
+
+
+            tableOfUsersBooks = new DataTable();
+            tableOfUsersBooks.Columns.Add("ID", typeof(String));
+            tableOfUsersBooks.Columns.Add("Book name", typeof(String));
         }
 
         private void BTNfindbook_Click(object sender, EventArgs e)
