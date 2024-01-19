@@ -26,10 +26,7 @@ namespace Library_Management_system
         public void addUser(string userName, string password)
         {
             tableOfUsers.Rows.Add(userName, password);
-        }
-        public void addUserID(string ID, string bookName)
-        {
-            tableOfUsersBooks.Rows.Add(ID, bookName);
+            tableOfUsersBooks.Rows.Add(userName);
         }
         public void loggedin(string userName)
         {
@@ -103,6 +100,11 @@ namespace Library_Management_system
             tableOfUsers.Columns.Add("User name", typeof(string));
             tableOfUsers.Columns.Add("Password", typeof(string));
             tableOfUsers.Rows.Add("Admin", "password");
+
+
+            tableOfUsersBooks = new DataTable();
+            tableOfUsersBooks.Columns.Add("User name", typeof(String));
+            tableOfUsersBooks.Columns.Add("Book name", typeof(String));
         }
 
         private void BTNfindbook_Click(object sender, EventArgs e)
