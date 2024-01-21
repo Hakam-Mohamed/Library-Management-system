@@ -31,12 +31,11 @@ namespace Library_Management_system
         }
         public void addBook2(string bookName, string userName)
         {
-            tableOfUsersBooks.Rows[num][1](bookName);
+            tableOfUsersBooks.Rows[0][1] = bookName;
         }
         public void getindexUsername(string userName)
         {
-
-            int indexUser = tableOfUsersBooks.FindIndex(0, userName);
+            int indexUser = tableOfUsersBooks.Rows.IndexOf(userName);
 
         }
 
