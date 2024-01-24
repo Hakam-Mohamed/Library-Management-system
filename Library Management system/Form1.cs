@@ -11,7 +11,8 @@ namespace Library_Management_system
         DataTable tableOfUsers;
         DataTable tableOfUsersBooks;
         bool loggedIn = false;
-
+        String UserName = "";
+        string BookName = "";
         public Window()
         {
             InitializeComponent();
@@ -25,9 +26,33 @@ namespace Library_Management_system
         }
         public void addUser(string userName, string password)
         {
+            UserName = userName;
             tableOfUsers.Rows.Add(userName, password);
             tableOfUsersBooks.Rows.Add(userName);
         }
+        public int findIndex()
+        {
+            int index = getindexUsername(UserName);
+            return index;
+        }
+        public void addBook2(string bookName)
+        {
+            int index2 = findIndex();
+            tableOfUsersBooks.Rows[index2][1] = bookName;
+        }
+        public int getindexUsername(string userName)
+        {
+            for (int i = 0; i < tableOfUsersBooks.Rows.Count; i++)
+            {
+                if (tableOfUsersBooks.Rows[0][i] == userName)
+                {
+                    return i;
+                }
+            }
+            return -1;
+
+        }
+
         public void loggedin(string userName)
         {
             BTNloginSignUp.Hide();
@@ -115,6 +140,7 @@ namespace Library_Management_system
             {
                 LBoutputbookname.Text = tableOfBooks.Rows[index].ItemArray[1].ToString();
                 // Matches up the Row with the Row index and outputs the name of the book on that Row
+                BookName = LBoutputbookname.Text;
             }
         }
 
@@ -141,6 +167,8 @@ namespace Library_Management_system
             {
                 tableOfBooks.Rows[index][2] = "14 days";
                 LBreserveable.Text = "Reserved book for " + tableOfBooks.Rows[index][2].ToString();
+                tableOfUsersBooks.Rows[findIndex()][1] = tableOfUsersBooks.Rows[findIndex()][1] + "," + BookName;
+
             }
 
 
