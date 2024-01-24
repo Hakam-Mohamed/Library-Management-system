@@ -40,20 +40,24 @@
             LBreserveable = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
+            LBUsername = new Label();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // LBfindbookid
             // 
             LBfindbookid.AutoSize = true;
-            LBfindbookid.BackColor = Color.FromArgb(0, 192, 192);
+            LBfindbookid.BackColor = Color.Transparent;
             LBfindbookid.Font = new Font("Segoe UI", 10F);
             LBfindbookid.ForeColor = SystemColors.ButtonHighlight;
-            LBfindbookid.Location = new Point(317, 91);
+            LBfindbookid.Location = new Point(60, 55);
             LBfindbookid.Margin = new Padding(4, 0, 4, 0);
             LBfindbookid.Name = "LBfindbookid";
             LBfindbookid.Size = new Size(168, 28);
             LBfindbookid.TabIndex = 6;
             LBfindbookid.Text = "ID of book to find";
+            LBfindbookid.Click += LBfindbookid_Click;
             // 
             // TXBfindbookid
             // 
@@ -68,10 +72,10 @@
             // LBoutputbookname
             // 
             LBoutputbookname.AutoSize = true;
-            LBoutputbookname.BackColor = Color.FromArgb(0, 192, 192);
+            LBoutputbookname.BackColor = Color.Transparent;
             LBoutputbookname.Font = new Font("Segoe UI", 10F);
             LBoutputbookname.ForeColor = SystemColors.ButtonHighlight;
-            LBoutputbookname.Location = new Point(542, 155);
+            LBoutputbookname.Location = new Point(267, 122);
             LBoutputbookname.Margin = new Padding(4, 0, 4, 0);
             LBoutputbookname.Name = "LBoutputbookname";
             LBoutputbookname.Size = new Size(118, 28);
@@ -114,7 +118,7 @@
             BTNloginSignUp.FlatStyle = FlatStyle.Flat;
             BTNloginSignUp.Font = new Font("Segoe UI", 12F);
             BTNloginSignUp.ForeColor = SystemColors.ButtonHighlight;
-            BTNloginSignUp.Location = new Point(159, 206);
+            BTNloginSignUp.Location = new Point(148, 206);
             BTNloginSignUp.Margin = new Padding(4);
             BTNloginSignUp.Name = "BTNloginSignUp";
             BTNloginSignUp.Size = new Size(201, 66);
@@ -149,27 +153,49 @@
             // 
             // LBreserveable
             // 
-            LBreserveable.Location = new Point(138, 303);
+            LBreserveable.BackColor = Color.Transparent;
+            LBreserveable.ForeColor = SystemColors.ButtonHighlight;
+            LBreserveable.Location = new Point(-41, 265);
             LBreserveable.Name = "LBreserveable";
-            LBreserveable.Size = new Size(737, 48);
+            LBreserveable.Size = new Size(517, 48);
             LBreserveable.TabIndex = 14;
             LBreserveable.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
             panel1.BackColor = Color.RosyBrown;
-            panel1.Location = new Point(270, 36);
+            panel1.Controls.Add(LBreserveable);
+            panel1.Controls.Add(LBfindbookid);
+            panel1.Controls.Add(LBoutputbookname);
+            panel1.Location = new Point(258, 36);
             panel1.Name = "panel1";
-            panel1.Size = new Size(441, 254);
+            panel1.Size = new Size(453, 329);
             panel1.TabIndex = 15;
             // 
             // panel2
             // 
             panel2.BackColor = Color.RosyBrown;
+            panel2.Controls.Add(LBUsername);
             panel2.Location = new Point(770, 36);
             panel2.Name = "panel2";
-            panel2.Size = new Size(172, 68);
+            panel2.Size = new Size(189, 68);
             panel2.TabIndex = 16;
+            // 
+            // LBUsername
+            // 
+            LBUsername.BackColor = Color.Transparent;
+            LBUsername.Font = new Font("Segoe UI", 10F);
+            LBUsername.ForeColor = SystemColors.ButtonHighlight;
+            LBUsername.Image = (Image)resources.GetObject("LBUsername.Image");
+            LBUsername.ImageAlign = ContentAlignment.MiddleLeft;
+            LBUsername.Location = new Point(13, 19);
+            LBUsername.Margin = new Padding(4, 0, 4, 0);
+            LBUsername.Name = "LBUsername";
+            LBUsername.Size = new Size(172, 28);
+            LBUsername.TabIndex = 9;
+            LBUsername.Text = "Username";
+            LBUsername.TextAlign = ContentAlignment.MiddleCenter;
+            LBUsername.UseCompatibleTextRendering = true;
             // 
             // Window
             // 
@@ -179,20 +205,20 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1000, 562);
             Controls.Add(BTNloginSignUp);
-            Controls.Add(LBreserveable);
             Controls.Add(BTNreserve);
             Controls.Add(LBloggedIn);
             Controls.Add(BTNadmin);
             Controls.Add(BTNfindbook);
-            Controls.Add(LBoutputbookname);
             Controls.Add(TXBfindbookid);
-            Controls.Add(LBfindbookid);
-            Controls.Add(panel1);
             Controls.Add(panel2);
+            Controls.Add(panel1);
             Margin = new Padding(4);
             Name = "Window";
             Text = "Library Application";
             Load += Window_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -209,5 +235,6 @@
         private Label LBreserveable;
         private Panel panel1;
         private Panel panel2;
+        private Label LBUsername;
     }
 }

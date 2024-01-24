@@ -56,7 +56,7 @@ namespace Library_Management_system
         public void loggedin(string userName)
         {
             BTNloginSignUp.Hide();
-            LBloggedIn.Text = userName;
+            LBUsername.Text = userName;
             loggedIn = true;
             hideOrShow();
         }
@@ -71,7 +71,7 @@ namespace Library_Management_system
             return tableOfUsers;
         }
 
-        public DataTable getTableIDBooks() 
+        public DataTable getTableIDBooks()
         {
             return tableOfUsersBooks;
         }
@@ -171,6 +171,11 @@ namespace Library_Management_system
 
             }
 
+
+        }
+
+        private void LBfindbookid_Click(object sender, EventArgs e)
+        {
 
         }
     }
