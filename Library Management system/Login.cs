@@ -14,6 +14,7 @@ namespace Library_Management_system
     {
         private readonly Window _win;
         DataTable tableOfUsers;
+        DataTable tableOfUsersBooks;
         public Login(Window win)
         {
             InitializeComponent();
@@ -46,6 +47,8 @@ namespace Library_Management_system
                 _win.addUser(TXBUserName.Text, TXBpassword.Text);
                 TXBUserName.Text = "";
                 TXBpassword.Text = "";
+                tableOfUsersBooks = _win.getTableIDBooks();
+                tableOfUsersBooks.Rows[0][1] = ".";
             }
         }
     }

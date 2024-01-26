@@ -167,8 +167,14 @@ namespace Library_Management_system
             {
                 tableOfBooks.Rows[index][2] = "14 days";
                 LBreserveable.Text = "Reserved book for " + tableOfBooks.Rows[index][2].ToString();
-                tableOfUsersBooks.Rows[findIndex()][1] = tableOfUsersBooks.Rows[findIndex()][1] + "," + BookName;
-
+                if (tableOfUsersBooks.Rows[findIndex()][1] == ".")
+                {
+                    tableOfUsersBooks.Rows[findIndex()][1] = BookName;
+                }
+                else
+                {
+                    tableOfUsersBooks.Rows[findIndex()][1] = tableOfUsersBooks.Rows[findIndex()][1] + ", " + BookName;
+                }
             }
 
 
@@ -177,6 +183,11 @@ namespace Library_Management_system
         private void LBfindbookid_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BTNbookHistory_Click(object sender, EventArgs e)
+        {
+            LBreserveable.Text = tableOfUsersBooks.Rows[findIndex()][1].ToString();
         }
     }
 }

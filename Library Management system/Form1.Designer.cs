@@ -40,6 +40,7 @@
             LBreserveable = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
+            BTNbookHistory = new Button();
             LBUsername = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -175,11 +176,22 @@
             // panel2
             // 
             panel2.BackColor = Color.RosyBrown;
+            panel2.Controls.Add(BTNbookHistory);
             panel2.Controls.Add(LBUsername);
             panel2.Location = new Point(770, 36);
             panel2.Name = "panel2";
-            panel2.Size = new Size(189, 68);
+            panel2.Size = new Size(189, 142);
             panel2.TabIndex = 16;
+            // 
+            // BTNbookHistory
+            // 
+            BTNbookHistory.Location = new Point(22, 79);
+            BTNbookHistory.Name = "BTNbookHistory";
+            BTNbookHistory.Size = new Size(137, 34);
+            BTNbookHistory.TabIndex = 17;
+            BTNbookHistory.Text = "Book history";
+            BTNbookHistory.UseVisualStyleBackColor = true;
+            BTNbookHistory.Click += BTNbookHistory_Click;
             // 
             // LBUsername
             // 
@@ -236,5 +248,6 @@
         private Panel panel1;
         private Panel panel2;
         private Label LBUsername;
+        private Button BTNbookHistory;
     }
 }
