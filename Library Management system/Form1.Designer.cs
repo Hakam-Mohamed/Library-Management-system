@@ -185,12 +185,16 @@
             // 
             // BTNbookHistory
             // 
+            BTNbookHistory.BackColor = Color.FromArgb(0, 192, 192);
+            BTNbookHistory.FlatAppearance.BorderSize = 0;
+            BTNbookHistory.FlatStyle = FlatStyle.Flat;
+            BTNbookHistory.ForeColor = SystemColors.ButtonHighlight;
             BTNbookHistory.Location = new Point(22, 79);
             BTNbookHistory.Name = "BTNbookHistory";
             BTNbookHistory.Size = new Size(137, 34);
             BTNbookHistory.TabIndex = 17;
             BTNbookHistory.Text = "Book history";
-            BTNbookHistory.UseVisualStyleBackColor = true;
+            BTNbookHistory.UseVisualStyleBackColor = false;
             BTNbookHistory.Click += BTNbookHistory_Click;
             // 
             // LBUsername
